@@ -1,0 +1,6 @@
+1- Criar um algoritmo em py que reconheça as inputs (usar a API 'pynput')
+2- No algoritmo, precisa-se acumular as inputs no mesmo 'timing' que os Frames são capturados -> 60FPS = 16,666666666666699825 miliseg.
+3- O algoritmo deve salvar a sequência de inputs dentro do tempo pré-definido em uma lista
+4- A lista deve ser contida de objetos relacionados ao 'Controlling Inputs', Ex: [mouse.move(10,10), keyboard.press('q'), mouse.move(5,5)]
+5- Após o tempo ter se encerrado a lista com inputs naquele timing deve ser adicionada a uma outra lista (LIL - list inside list), Ex: [[], [], []]
+6- Salvar tudo em um arquivo '.txt' de maneira que seja fácil aplica-la na IA

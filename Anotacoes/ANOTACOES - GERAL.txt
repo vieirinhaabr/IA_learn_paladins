@@ -1,0 +1,5 @@
+1- Descartar todos os videos antigos, usa-los somente para obter novas ideias etc.
+2- Usar videos que contem os dados das inputs (teclado e mouse)
+3- Fazer um algoritmo em py para capturar as inputs e coloca-lo para rodar durante a gameplay (CHECAR ANOTACAO SOBRE ALGORITMO)
+4- Passar o frame inicial para IA como modelo padrão
+5- Passar as inputs como uma 'conta' para IA fazer e passar o frame seguinte como 'resultado'
