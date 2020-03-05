@@ -2,7 +2,7 @@ import cv2 as cv
 from PIL import Image
 
 class Teste:
-    def draw_image(self, image_path:str, number:int) -> None:
+    def draw_image(self, image_path:str, number:int, path_to_save:str) -> None:
         def newImg(image_path):
             to_correct = open(image_path).readlines()
             image_todraw = []
@@ -33,16 +33,15 @@ class Teste:
                     j = j + 1
                 i = i + 1
 
-            img.save('frame_'+str(number)+'.png')
+            img.save(path_to_save+'frame_'+str(number)+'.0.png')
 
-            return img
-
-        wallpaper = newImg(image_path)
-        wallpaper.show('frame')
+        newImg(image_path)
+        print('IMAGE NUMBER '+str(number)+': OK')
 
     def inital(self):
-        videos = ["Paladins/BK_and_Raum", "Paladins/BK_triple", 
-                  "Paladins/Jenos_catch_Ash", "Paladins/Viktor_have_wings"]
+        videos = ["Paladins/BK_and_Raum"]
+        """videos = ["Paladins/BK_and_Raum", "Paladins/BK_triple", 
+                  "Paladins/Jenos_catch_Ash", "Paladins/Viktor_have_wings"]"""
         sequence_frames = []
 
         for video in videos:
@@ -81,6 +80,8 @@ class Teste:
 
 if __name__ == "__main__":
     t = Teste()
-    t.inital()
-    #t.draw_image("Paladins/BK_and_Raum/frame_"+str(i)+".txt", i)
-
+    #t.inital()
+    i = 1
+    while i < 60:
+        t.draw_image("Paladins/BK_and_Raum/frame_"+str(i)+".0.txt", i, "Paladins/BK_and_Raum/")
+        i = i + 1
